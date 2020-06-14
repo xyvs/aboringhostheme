@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>{{meta_title}}</title>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+            ::selection {
+              background: #c4e4ff;
+            }
+
+            .pagination {
+                margin-top: 3rem;
+                text-align: center;
+            }
+
+            .page-number {
+                margin: 0 1rem;
+                font-weigth: semibold;
+            }
+
+            .newer-posts, .older-posts {
+                color: #718096;
+            }
+
+            .post pre {
+                background-color: #0f0f0f;
+                margin: 1rem 0;
+                color: #e5eff5;
+                padding: 1rem 1.5rem;
+                font-size: .85rem;
+                overflow-x: auto;
+                border-radius: 5px;
+            }
+
+            strong {
+                font-weight: bold;
+            }
+
+            .post h1,
+            .post h2,
+            .post h3,
+            .post h4,
+            .post h5 {
+                font-weight: bold;
+                margin: .5rem 0 .75rem 0;
+                color: #0f0f0f;
+            }
+
+            .post h1 {
+                font-size: 2rem;
+            }
+
+            .post h2 {
+                font-size: 1.5rem;
+            }
+
+            .post h3 {
+                font-size: 1.25rem;
+            }
+
+            .post a {
+                color: #68b7e4;
+            }
+
+            .post p {
+                margin-bottom: 2rem;
+            }
+
+            .post p code {
+                background-color: #d0edff;
+            }
+
+            .post ol,
+            .post ul {
+                margin-bottom: 2rem;
+            }
+
+            .post li {
+                margin-bottom: .75rem;
+            }
+
+            .post li:before {
+                content: "-";
+                margin-right: .75rem;
+            }
+
+            .post blockquote {
+                margin-bottom: 2rem;
+                border-left: 3px solid #43baff;
+                padding: .25rem 0 .25rem 1rem;
+                font-style: italic;
+            }
+
+            .post img, figure {
+                margin-bottom: 2rem;
+            }
+
+            .post figcaption {
+                text-align: center;
+                font-size: .9rem;
+            }
+        </style>
+        {{ghost_header}}
+    </head>
+    <body class="font-sans w-11/12 md:w-7/12 lg:w-6/12 xl:w-4/12 mx-auto">
+        <header class="my-16 text-center">
+            <a href="{{@blog.url}}">
+                <h1 class="font-semibold text-4xl">{{@blog.title}}</h1>
+            </a>
+            <p class="my-4 text-gray-600">{{@blog.description}}</p>
+        </header>
+        <section class="{{body_class}}">
+            {{{body}}}
+        </section>
+    </body>
+    {{ghost_foot}}
+</html>

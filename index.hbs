@@ -1,0 +1,13 @@
+{{!< default}}
+<main>
+    {{#foreach posts}}
+        <div class="flex align-center justify-between my-5">
+            <a href="{{url}}" class="font-semibold hover:text-blue-600">{{title}}</a>
+            <time class="text-gray-600 text-sm" datetime="{{date format='YYYY-MM-DD'}}">
+                {{date}}
+            </time>
+        </div>
+    {{/foreach}}
+</main>
+
+{{pagination}}

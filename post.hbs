@@ -1,0 +1,15 @@
+{{!< default }}
+<main>
+    {{#post}}
+        <div class="post-container">
+            <div class="mt-10 mb-4">
+                <h2 class="text-4xl font-bold pt-1 pb-1">{{title}}</h2> 
+                <p class="text-gray-600 font-sm">
+                    Posted by <a href="#/">{{author}}</a> on {{date}}
+                </p>
+            </div>
+            <img class="mb-4 mb-8" src="{{feature_image}}" alt="{{title}}">
+            <div class="post mb-16 text-gray-700 text-justify">{{content}}</div>
+        </div>
+    {{/post}}
+</main>

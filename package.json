@@ -1,0 +1,17 @@
+{
+    "name": "aboringhostheme",
+    "description": "A boring theme for Ghost",
+    "version": "0.1.0",
+    "keywords": ["ghost-theme"],
+    "engines": {
+        "ghost-api": "v3"
+    },
+    "license": "MIT",
+    "author": {
+        "email": "fran@xyvs.io"
+    },
+    "config": {
+        "posts_per_page": 25,
+        "image_sizes": {}
+    }
+}
