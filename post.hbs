@@ -1,14 +1,29 @@
 {{!< default }}
+<header class="mt-12 mb-8">
+    <div class="flex items-center justify-between">
+        <a class="flex items-center" href="{{@site.url}}">
+            <span class="fa fa-arrow-left mr-2"></span>
+            <h1 class="font-semibold text-2xl">Return</h1>
+        </a>     
+        <a href="{{@site.url}}">
+            <h1 class="font-semibold text-3xl">{{@site.title}}</h1>
+        </a>
+    </div>
+</header>
 <main>
     {{#post}}
         <div class="post-container">
-            <div class="mt-10 mb-4">
+            <div class="mb-4">
                 <h2 class="text-4xl font-bold pt-1 pb-1">{{title}}</h2> 
                 <p class="text-gray-600 font-sm">
-                    Posted by <a href="#/">{{author}}</a> on {{date}}
+                    Posted by <a href="#/">{{authors}}</a> on {{date}}
                 </p>
             </div>
-            <img class="mb-4 mb-8" src="{{feature_image}}" alt="{{title}}">
+            <div class="mb-8">
+                {{# if feature_image}}
+                <img class="mb-8" src="{{feature_image}}" alt="{{title}}">
+                {{/if}}
+            </div>
             <div class="post mb-16 text-gray-700 text-justify">{{content}}</div>
         </div>
     {{/post}}

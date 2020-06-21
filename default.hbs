@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>{{meta_title}}</title>
+        <script src="https://kit.fontawesome.com/5e1f5a95a3.js" crossorigin="anonymous"></script>
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
         <style>
             ::selection {
@@ -102,15 +103,9 @@
                 font-size: .9rem;
             }
         </style>
-        {{ghost_header}}
+        {{ghost_head}}
     </head>
-    <body class="font-sans w-11/12 md:w-7/12 lg:w-6/12 xl:w-4/12 mx-auto">
-        <header class="my-16 text-center">
-            <a href="{{@blog.url}}">
-                <h1 class="font-semibold text-4xl">{{@blog.title}}</h1>
-            </a>
-            <p class="my-4 text-gray-600">{{@blog.description}}</p>
-        </header>
+    <body class="font-sans w-11/12 md:w-7/12 lg:w-6/12 xl:w-5/12 mx-auto">
         <section class="{{body_class}}">
             {{{body}}}
         </section>

@@ -1,4 +1,10 @@
 {{!< default}}
+<header class="my-16 text-center">
+    <a href="{{@site.url}}">
+        <h1 class="font-semibold text-4xl">{{@site.title}}</h1>
+    </a>
+    <p class="my-4 text-gray-600">{{@site.description}}</p>
+</header>
 <main>
     {{#foreach posts}}
         <div class="flex align-center justify-between my-5">
